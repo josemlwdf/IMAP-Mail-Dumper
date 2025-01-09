@@ -50,12 +50,12 @@ The script is designed to handle common errors gracefully and display email cont
 
 2. Navigate to the project directory:
    ```bash
-   cd email-client-script
+   cd IMAP-Mail-Dumper 
    ```
 
 3. Run the script:
    ```bash
-   python test.py
+   python3 IMAP_Client.py
    ```
 
 ---
@@ -77,7 +77,7 @@ password = "your-password"
 Simply execute the script:
 
 ```bash
-python test.py
+python IMAP_Client.py
 ```
 
 The script will:
