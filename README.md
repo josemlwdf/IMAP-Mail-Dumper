@@ -88,25 +88,7 @@ The script will:
 
 ### Example Output
 
-```plaintext
-Creating EmailClient instance
-Initializing EmailClient
-Connecting to the IMAP server
-Connecting to IMAP server: your.imap.server
-Logging in to IMAP
-IMAP login successful
-Listing IMAP mailboxes
-Mailbox: INBOX
-Selecting IMAP mailbox: INBOX
-Fetching IMAP emails with criterion: ALL
-Processing IMAP email ID: 1
-Subject: Test Email
-From: sender@example.com
-Body:
-This is a test email.
-
---------------------------------------------------
-```
+![image](https://github.com/user-attachments/assets/c20dc69b-6315-418c-90f2-d2efee02a569)
 
 ---
 
