@@ -1,6 +1,5 @@
 import imaplib
-import email
-
+import sys
 
 class EmailClient:
     def __init__(self, server, email, password):
@@ -10,12 +9,21 @@ class EmailClient:
         self.password = password
         self.imap_connection = None
 
-    def connect_imap(self):
+    def connect_imap(self, use_ssl=True):
         print(f"Connecting to IMAP server: {self.server}")
-        self.imap_connection = imaplib.IMAP4_SSL(self.server)
-        print("Logging in to IMAP")
-        self.imap_connection.login(self.email, self.password)
-        print("IMAP login successful")
+        try:
+            if use_ssl:
+                self.imap_connection = imaplib.IMAP4_SSL(self.server)
+            else:
+                self.imap_connection = imaplib.IMAP4(self.server)
+            print("Logging in to IMAP")
+            self.imap_connection.login(self.email, self.password)
+            print("IMAP login successful")
+        except Exception as e:
+            print(f"Error connecting to IMAP: {e}")
+            if use_ssl:
+                print("Falling back to non-SSL IMAP...")
+                self.connect_imap(use_ssl=False)
 
     def list_mailboxes(self):
         if self.imap_connection:
@@ -106,10 +114,17 @@ class EmailClient:
 
 
 # Usage example
+def display_usage():
+    print("Usage: python email_client.py <server> <username> <password>")
+
 if __name__ == "__main__":
-    server = "10.129.234.87"
-    email = "robin"
-    password = "robin"
+    if len(sys.argv) != 4:
+        display_usage()
+        sys.exit(1)
+
+    server = sys.argv[1]
+    email = sys.argv[2]
+    password = sys.argv[3]
 
     print("Creating EmailClient instance")
     client = EmailClient(server, email, password)
