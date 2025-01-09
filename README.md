@@ -66,7 +66,7 @@ Update the following variables in the script to match your email server and cred
 
 ```python
 server = "your.imap.server"
-email = "your-email@example.com"
+email/username = "your-email@example.com"
 password = "your-password"
 ```
 
@@ -75,7 +75,7 @@ password = "your-password"
 Simply execute the script:
 
 ```bash
-python IMAP_Client.py
+python IMAP_Client.py mail.google.com myusername mypassword
 ```
 
 The script will:
