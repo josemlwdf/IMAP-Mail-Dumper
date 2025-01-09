@@ -36,8 +36,6 @@ The script is designed to handle common errors gracefully and display email cont
 - Python 3.8+
 - Modules:
   - `imaplib`
-  - `email`
-  - `email.header`
 
 ---
 
