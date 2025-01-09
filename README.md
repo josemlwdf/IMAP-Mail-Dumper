@@ -75,7 +75,7 @@ password = "your-password"
 Simply execute the script:
 
 ```bash
-python IMAP_Client.py mail.google.com myusername mypassword
+python3 IMAP_Client.py mail.google.com myusername mypassword
 ```
 
 The script will:
