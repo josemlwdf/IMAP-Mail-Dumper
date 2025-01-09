@@ -45,7 +45,7 @@ The script is designed to handle common errors gracefully and display email cont
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/email-client-script.git
+   git clone https://github.com/josemlwdf/IMAP-Mail-Dumper.git
    ```
 
 2. Navigate to the project directory:
