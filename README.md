@@ -86,7 +86,7 @@ The script will:
 
 ### Example Output
 
-![image](https://github.com/user-attachments/assets/c20dc69b-6315-418c-90f2-d2efee02a569)
+![image](https://github.com/user-attachments/assets/55aea58d-a5db-4d96-99a9-a8822b8a03d7)
 
 ---
 
